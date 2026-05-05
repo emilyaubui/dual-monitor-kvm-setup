@@ -1,6 +1,5 @@
-def main():
-    print("Hello from dual-monitor-kvm-setup!")
+#import diagrams & custom nodes
+from diagrams import Diagram, Cluster
+from diagrams.custom import Custom
 
-
-if __name__ == "__main__":
-    main()
+with Diagram
