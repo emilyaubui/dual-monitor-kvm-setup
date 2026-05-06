@@ -7,7 +7,7 @@ graph_attr = {
       "layout": "neato",
       "overlap": "false",
       "compound": "true",
-      "bgcolor": "transparent",
+      "bgcolor": "white",
 }
 
 import os
