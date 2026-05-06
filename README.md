@@ -5,3 +5,8 @@ Requirements:
 - Simultaneously handle 1440p@240Hz & 1080p@165Hz
 - EDID emulation (more on that later)
 - Enough ports for at least 4 USB devices (keyboard, mouse, microphone, webcam)
+
+<picture>
+  <source srcset="image-dark.png" media="(prefers-color-scheme: light)">
+  <img src="./kvm_setup.png">
+</picture>
