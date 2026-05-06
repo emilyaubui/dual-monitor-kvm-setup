@@ -63,6 +63,5 @@ with Diagram("\nDual DP Monitors with 1 PC + 1 Laptop",
     headset_usb >> Edge(color="blue", style="dashed") >> headset
     mouse_usb >> Edge(color="blue", style="dashed") >> mouse
     
-
 #open with window's file opener
 os.system("explorer.exe kvm_setup.png")
