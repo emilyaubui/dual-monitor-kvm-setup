@@ -13,7 +13,8 @@ Here is a diagram of my setup:
 </picture>
 
 This diagram was made using [Diagrams as Code](https://diagrams.mingrammer.com/)
-[View the full script](main.py)
+
+[View the full script](diagram.py)
 
 ### Devices & Peripherals
 I needed to stitch together the following devices and their interfaces:
