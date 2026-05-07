@@ -20,6 +20,9 @@ with Diagram("\nDual DP Monitors with 1 PC + 1 Laptop",
     direction="TB",
     graph_attr=graph_attr) as diag:
 
+    outlet = Custom("Power", "./icons/outlet.png", pin="true", pos="2,5")
+    switch = Custom("PC1/2 Switch", "./icons/switch.png", pin="true", pos="3,2")
+
     with Cluster("Desk"):
         with Cluster("Monitors"):
             main_screen = Custom("Asus XG27UCG-W\n1440p@240Hz", "./icons/screen.png", pin="true", pos="0,5")
@@ -44,7 +47,9 @@ with Diagram("\nDual DP Monitors with 1 PC + 1 Laptop",
             headset_usb = Custom("Logitech G733\nUSB Receiver", "./icons/usb.png", pin="true", pos="0.5,1")
             mouse_usb = Custom("Pulsar X2A\nUSB Receiver", "./icons/usb.png", pin="true", pos="1.5,1")
 
-    laptop >> Edge(label="Thunderbolt 4 USB-C")>>tb4_dock
+    laptop >> Edge(label="Thunderbolt 4 USB-C") >> tb4_dock
+    outlet >> [computer, laptop, kvm_switch]
+    
     kvm_switch << Edge(label="2xDP 1.4\n+ 1xUSB3.0") >> [
         main_screen,
         second_screen,
@@ -60,6 +65,8 @@ with Diagram("\nDual DP Monitors with 1 PC + 1 Laptop",
         mouse_usb,
         keyboard,
     ]
+    kvm_switch << Edge(color="yellow,") << switch
+
     headset_usb >> Edge(color="blue", style="dashed") >> headset
     mouse_usb >> Edge(color="blue", style="dashed") >> mouse
     
